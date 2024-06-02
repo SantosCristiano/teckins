@@ -6,7 +6,7 @@
     <h1>Editar o Usuário {{ $user->name }}</h1>
     <x-alert/>
 
-    <form action="{{ route('users.update', $user->id)') }}" method="POST">
+    <form action="{{ route('users.update', $user->id)) }}" method="POST">
         @csrf()
         @method('put')
         <input type="text" name="name" placeholder="Nome" value="{{ $user->name }}">
